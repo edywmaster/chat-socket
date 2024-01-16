@@ -10,11 +10,11 @@ const mysql = require('mysql2')
 
 // Configuração de conexão com o banco de dados
 const dbConfig = {
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
-  port: process.env.DB_PORT
+  host: 'db-mysql-nyc3-66943-do-user-2678382-0.c.db.ondigitalocean.com',
+  user: 'doadmin',
+  password: 'AVNS_niL2B31NkB22jCnOOZE',
+  database: 'defaultdb',
+  port: '25060'
 }
 
 // Cria a conexão com o banco de dados
