@@ -140,7 +140,7 @@ async function insertMessage(userid, message) {
 }
 
 io.on('connection', socket => {
-  console.log('server v2')
+  console.log('server v2.0.0')
   console.log('New user connected', socket.id)
 
   // Busca as últimas mensagens do banco de dados
