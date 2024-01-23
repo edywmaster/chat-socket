@@ -63,7 +63,7 @@ const io = socketIo(server, {
 async function getLastMessages() {
   return new Promise((resolve, reject) => {
     db.query(
-      'SELECT * FROM (SELECT messages.id, users.userid, users.username, users.avatar, users.admin, messages.message FROM messages RIGHT JOIN users ON users.userid = messages.userid ORDER BY messages.id DESC LIMIT 50) AS tab ORDER BY 1 ASC',
+      'SELECT * FROM (SELECT messages.id, users.userid, users.username, users.avatar, users.admin, messages.message FROM messages LEFT JOIN users ON users.userid = messages.userid ORDER BY messages.id DESC LIMIT 50) AS tab ORDER BY 1 ASC',
       (err, results) => {
         if (err) {
           reject(err)
